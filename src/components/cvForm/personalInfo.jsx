@@ -14,9 +14,13 @@ export default function PersonalInfo(){
     )
 }
 
-function Input({value,type='text'}){
+function Input({value, type='text', onChange}){
     return(
-        <input placeholder={value} type={type}></input>
+        <input 
+placeholder={value} 
+type={type} 
+            onChange={onChange}
+></input>
     )
 }
 
