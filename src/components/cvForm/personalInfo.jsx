@@ -3,13 +3,13 @@ export default function PersonalInfo(){
     return(
         <div className="personal">
             <h2>Personal Info</h2>
-            <Input value='First Name'></Input>
-            <Input value='Last Name'></Input>
-            <Input value='Title'></Input>
-            <Input value='Address'></Input>
-            <Input value='Phone Number' type="tel"></Input>
-            <Input value='Email' type='email'></Input>
-            <textarea rows='4' cols='50' placeholder="Description"></textarea>
+            <Input value='First Name' onChange={(e) => onFirstNameChange(e.target.value)}></Input>
+            <Input value='Last Name' onChange={(e) => onLastNameChange(e.target.value)}></Input>
+            <Input value='Title' onChange={(e) => onTitleChange(e.target.value)}></Input>
+            <Input value='Address' onChange={(e) => onAddressChange(e.target.value)}></Input>
+            <Input value='Phone Number' type="tel" onChange={(e) => onPhoneChange(e.target.value)}></Input>
+            <Input value='Email' type='email' onChange={(e) => onEmailChange(e.target.value)}></Input>
+            <textarea rows='4' cols='50' placeholder="Description" onChange={(e) => onDescriptionChange(e.target.value)}></textarea>
         </div>
     )
 }
