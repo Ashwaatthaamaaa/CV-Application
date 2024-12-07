@@ -54,8 +54,8 @@ export default function Content(){
     const [edu,setEdu] = useState([]);
     const addEdu = ()=>{
         const newEdu = {
-            Course:'',
-            Institution:'',
+            course:'',
+            institution:'',
             startYear:'',
             endYear:'',
             isEditing:true
