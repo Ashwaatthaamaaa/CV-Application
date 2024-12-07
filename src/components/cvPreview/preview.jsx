@@ -24,7 +24,16 @@ export default function Preview(){
             <hr></hr>
             <div className="exp">
                 <h2>Experience</h2>
+{workExps.map((exp,index)=>{
+                    console.log(exp);
+                    return(
+                        <WorkExPreview
+                        key={index}
+                        exp={exp}
+                    />
+                    )
 
+                })}
             </div>
             <div className="edu">
                 <h2>Education</h2>

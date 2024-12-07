@@ -21,30 +21,30 @@ export default function WorkEx({exp, onSave, onEdit, onDelete}){
 
     return(
         <div className="work">
-        <Input 
-value='Position' 
+            <Input 
+                value='Position' 
                 inputValue={formData.position}
                 onChange={(e) => setFormData(prev => ({...prev, position: e.target.value}))}
             />
-        <Input 
-value='Company' 
+            <Input 
+                value='Company' 
                 inputValue={formData.company}
                 onChange={(e) => setFormData(prev => ({...prev, company: e.target.value}))}
             />
-        <Input 
-value='Start Date' 
+            <Input 
+                value='Start Date' 
                 inputValue={formData.startDate}
                 onChange={(e) => setFormData(prev => ({...prev, startDate: e.target.value}))}
             />
-        <Input 
-value='End Date' 
+            <Input 
+                value='End Date' 
                 inputValue={formData.endDate}
                 onChange={(e) => setFormData(prev => ({...prev, endDate: e.target.value}))}
             />
-        <textarea 
-placeholder="Description" 
-rows='4' 
-cols='50' 
+            <textarea 
+                placeholder="Description" 
+                rows='4' 
+                cols='50' 
                 value={formData.description}
                 onChange={(e) => setFormData(prev => ({...prev, description: e.target.value}))}
             />
@@ -56,6 +56,11 @@ cols='50'
 
 function Input({value, type='text', onChange, inputValue}){
     return(
-        <input placeholder={value} type={type}></input>
+        <input 
+            placeholder={value} 
+            type={type} 
+            onChange={onChange}
+            value={inputValue}
+        ></input>
     )
 }
