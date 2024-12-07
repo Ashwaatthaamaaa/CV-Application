@@ -37,6 +37,17 @@ export default function Preview(){
             </div>
             <div className="edu">
                 <h2>Education</h2>
+{edus.map((edu,index)=>{
+                                        console.log(edu);
+
+                    return(
+                        <Edu
+                            key={index}
+                            edu={edu}/>
+                    )
+                })
+
+                }
             </div>
         </div> 
     )
