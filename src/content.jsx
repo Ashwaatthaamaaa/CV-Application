@@ -67,7 +67,7 @@ export default function Content(){
 
     const saveEdu = (index,updatedEdu)=>{
         const updatedEdus = [...edu];
-        updatedEdu[index]={
+        updatedEdus[index]={
             ...updatedEdu,
             isEditing: false
         };
@@ -118,18 +118,15 @@ export default function Content(){
                         onDelete={() => deleteWorkExp(index)}
                     />
                 ))}
-
-                <Education/>
                 <h2>Education</h2>
                 <button onClick={addEdu}>Add Education</button>
-                {edu.map((edu,index)=>(
+                {edu.map((eduIndividual,index)=>(
                     <Edu
                         key={index}
-                        edu={edu}
+                        edus={eduIndividual}
                         onSave={(updatedEdu) => saveEdu(index, updatedEdu)}
                         onEdit={() => editEdu(index)}
-                        onDelete={() => deleteEdu(index)}
-                    />
+                        onDelete={() => deleteEdu(index)}/>
                 ))}
             </div>
             <Preview
