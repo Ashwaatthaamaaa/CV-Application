@@ -17,11 +17,9 @@ export default function PersonalInfo({ onFirstNameChange, onLastNameChange, onTi
 function Input({value, type='text', onChange}){
     return(
         <input 
-placeholder={value} 
-type={type} 
+            placeholder={value} 
+            type={type} 
             onChange={onChange}
-></input>
+        ></input>
     )
 }
-
-
