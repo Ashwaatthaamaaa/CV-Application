@@ -82,7 +82,7 @@ export default function Content(){
 
     const deleteEdu = (index) => {
         const updatedEdus = edu.filter((_,i)=> i !== index);
-        setWorkEx(updatedEdus);
+        setEdu(updatedEdus);
     }
 
 
