@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function PersonalInfo(){
+export default function PersonalInfo({ onFirstNameChange, onLastNameChange, onTitleChange, onAddressChange, onPhoneChange, onEmailChange,onDescriptionChange }){
     return(
         <div className="personal">
             <h2>Personal Info</h2>
