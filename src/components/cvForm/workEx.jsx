@@ -1,16 +1,24 @@
 /* eslint-disable react/prop-types */
-export default function WorkEx(){
-    return(
-        <>
-                <h2>Work Experience</h2>
-                <Work/>
-        </>
+// export default function WorkEx(){
+//     return(
+//         <>
+//                 <Work/>
+//         </>
 
-    )
-}
+//     )
+// }
+import React, { useState } from 'react';
 
+export default function WorkEx({exp, onSave, onEdit, onDelete}){
 
-function Work(){
+    const [formData, setFormData] = useState({
+        company: exp.company || '',
+        position: exp.position || '',
+        startDate: exp.startDate || '',
+        endDate: exp.endDate || '',
+        description: exp.description || ''
+    });
+
     return(
         <div className="work">
         <Input 
