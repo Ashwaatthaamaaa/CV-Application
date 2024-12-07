@@ -54,8 +54,7 @@ cols='50'
     )
 }
 
-
-function Input({value,type='text'}){
+function Input({value, type='text', onChange, inputValue}){
     return(
         <input placeholder={value} type={type}></input>
     )
