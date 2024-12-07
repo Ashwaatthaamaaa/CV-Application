@@ -13,11 +13,35 @@ export default function WorkEx(){
 function Work(){
     return(
         <div className="work">
-        <Input value='Position'></Input>
-        <Input value='Company'></Input>
-        <Input value='Start Date'></Input>
-        <Input value='End Date'></Input>
-        <textarea placeholder="Description" rows='4' cols='50'></textarea>
+        <Input 
+value='Position' 
+                inputValue={formData.position}
+                onChange={(e) => setFormData(prev => ({...prev, position: e.target.value}))}
+            />
+        <Input 
+value='Company' 
+                inputValue={formData.company}
+                onChange={(e) => setFormData(prev => ({...prev, company: e.target.value}))}
+            />
+        <Input 
+value='Start Date' 
+                inputValue={formData.startDate}
+                onChange={(e) => setFormData(prev => ({...prev, startDate: e.target.value}))}
+            />
+        <Input 
+value='End Date' 
+                inputValue={formData.endDate}
+                onChange={(e) => setFormData(prev => ({...prev, endDate: e.target.value}))}
+            />
+        <textarea 
+placeholder="Description" 
+rows='4' 
+cols='50' 
+                value={formData.description}
+                onChange={(e) => setFormData(prev => ({...prev, description: e.target.value}))}
+            />
+            <button onClick={() => onSave(formData)}>Save</button>
+            <button onClick={onDelete}>Delete</button>
         </div>
     )
 }
