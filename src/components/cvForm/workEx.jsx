@@ -48,8 +48,10 @@ export default function WorkEx({exp, onSave, onEdit, onDelete}){
                 value={formData.description}
                 onChange={(e) => setFormData(prev => ({...prev, description: e.target.value}))}
             />
-            <button onClick={() => onSave(formData)}>Save</button>
-            <button onClick={onDelete}>Delete</button>
+            <div className="buttons">
+            <button onClick={() => onSave(formData) } className='save'>Save</button>
+            <button onClick={onDelete} className='delete'>Delete</button>
+            </div>
         </div>
     )
 }
