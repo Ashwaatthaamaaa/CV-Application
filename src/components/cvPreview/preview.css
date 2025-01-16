@@ -5,6 +5,15 @@
     flex-direction: column;
 }
 
+.eduInfo{
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+}
+
 .first{
     display: flex;
     flex-direction: row;
