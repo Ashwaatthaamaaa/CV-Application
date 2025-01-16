@@ -4,10 +4,10 @@ export default function Edu({edu}){
     return(
         <div className="eduInfo">
             <div className="course">
-                {edu.course}
+                <strong>{edu.course}</strong>
             </div>
             <div className="other">
-                    {edu.institution}|{edu.startYear}-{edu.endYear}
+                    <strong>{edu.institution}</strong>| {edu.startYear} - {edu.endYear}
             </div>
         </div>
     )
