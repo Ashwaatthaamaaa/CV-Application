@@ -108,7 +108,6 @@ export default function Content(){
                     onDescriptionChange={setDescription}
                 />
                 <h2>Work Experience</h2>
-                <button onClick={addWorkEx}>Add Experience</button>
                 {workEx.map((exp,index)=>(
                     <WorkEx
                         key={index}
@@ -118,8 +117,8 @@ export default function Content(){
                         onDelete={() => deleteWorkExp(index)}
                     />
                 ))}
+                <button onClick={addWorkEx} id="expBtn">Add Experience</button>
                 <h2>Education</h2>
-                <button onClick={addEdu}>Add Education</button>
                 {edu.map((eduIndividual,index)=>(
                     <Edu
                         key={index}
@@ -128,6 +127,7 @@ export default function Content(){
                         onEdit={() => editEdu(index)}
                         onDelete={() => deleteEdu(index)}/>
                 ))}
+                <button onClick={addEdu}>Add Education</button>
             </div>
             <Preview
                 firstName={firstName}
