@@ -22,28 +22,32 @@ export default function Edu({ edus, onSave, onEdit, onDelete }) {
 
     return (
         <div className="edu">
-            <Input 
-                value={formData.course} 
-                placeholder='Course' 
-                onChange={(e) => setFormData(prev => ({ ...prev, course: e.target.value }))} 
-            />
-            <Input 
-                value={formData.institution} 
-                placeholder='University/School' 
-                onChange={(e) => setFormData(prev => ({ ...prev, institution: e.target.value }))} 
-            />
-            <Input 
-                value={formData.startYear} 
-                placeholder='Start Year' 
-                onChange={(e) => setFormData(prev => ({ ...prev, startYear: e.target.value }))} 
-            />
-            <Input 
-                value={formData.endYear} 
-                placeholder='Graduated Year' 
-                onChange={(e) => setFormData(prev => ({ ...prev, endYear: e.target.value }))} 
-            />
-            <button onClick={() => onSave(formData)}>Save</button>
-            <button onClick={onDelete}>Delete</button>
+            <div className="inputEdu">
+                <Input 
+                    value={formData.course} 
+                    placeholder='Course' 
+                    onChange={(e) => setFormData(prev => ({ ...prev, course: e.target.value }))} 
+                />
+                <Input 
+                    value={formData.institution} 
+                    placeholder='University/School' 
+                    onChange={(e) => setFormData(prev => ({ ...prev, institution: e.target.value }))} 
+                />
+                <Input 
+                    value={formData.startYear} 
+                    placeholder='Start Year' 
+                    onChange={(e) => setFormData(prev => ({ ...prev, startYear: e.target.value }))} 
+                />
+                <Input 
+                    value={formData.endYear} 
+                    placeholder='Graduated Year' 
+                    onChange={(e) => setFormData(prev => ({ ...prev, endYear: e.target.value }))} 
+                />
+            </div>
+            <div className="buttons">
+                <button onClick={() => onSave(formData)}>Save</button>
+                <button onClick={onDelete}>Delete</button>
+            </div>
         </div>
     );
 }
@@ -58,3 +62,4 @@ function Input({ value, placeholder, type = 'text', onChange }) {
         />
     );
 }
+
